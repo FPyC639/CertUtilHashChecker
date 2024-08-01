@@ -2,6 +2,13 @@
 # CertUtil Windows Form
 
 This Windows Form application allows users to check the SHA256 hash of a file. The application has room for improvement which will be done in the subsequent updates to the application.
+
+# Update 20240731
+
+The graphical user interface was updated, along with the algorithms that can be selected.
+
+![App GUI Appearence](GUIApp.png)
+
 ## Acknowledgements
 
  - Professors at Kean University
