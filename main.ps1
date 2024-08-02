@@ -1,5 +1,6 @@
 # Load the necessary assembly for Windows Forms
 Add-Type -AssemblyName System.Windows.Forms
+Add-Type -AssemblyName System.Drawing
 
 # Create the main form
 $form = New-Object System.Windows.Forms.Form
@@ -11,12 +12,12 @@ $form.StartPosition = 'CenterScreen'
 $label = New-Object System.Windows.Forms.Label
 $label.Text = "Enter the target Checksum:"
 $label.Location = New-Object System.Drawing.Point(10, 20)
-$label.Size = New-Object System.Drawing.Size(160, 20)
+$label.Size = New-Object System.Drawing.Size(200, 20)
 $form.Controls.Add($label)
 
 # Create a text box for input for target checksum
 $textBox = New-Object System.Windows.Forms.TextBox
-$textBox.Location = New-Object System.Drawing.Point(180, 20)
+$textBox.Location = New-Object System.Drawing.Point(220, 20)
 $textBox.Size = New-Object System.Drawing.Size(260, 20)
 $form.Controls.Add($textBox)
 
@@ -24,12 +25,12 @@ $form.Controls.Add($textBox)
 $label2 = New-Object System.Windows.Forms.Label
 $label2.Text = "Select Hashing Algorithm:"
 $label2.Location = New-Object System.Drawing.Point(10, 60)
-$label2.Size = New-Object System.Drawing.Size(160, 20)
+$label2.Size = New-Object System.Drawing.Size(200, 20)
 $form.Controls.Add($label2)
 
 # Create a ComboBox for hashing algorithm selection
 $comboBox = New-Object System.Windows.Forms.ComboBox
-$comboBox.Location = New-Object System.Drawing.Point(180, 60)
+$comboBox.Location = New-Object System.Drawing.Point(220, 60)
 $comboBox.Size = New-Object System.Drawing.Size(200, 20)
 $comboBox.Items.AddRange(@("SHA256", "MD5", "SHA1", "MD4"))
 $form.Controls.Add($comboBox)
@@ -38,7 +39,7 @@ $form.Controls.Add($comboBox)
 $button = New-Object System.Windows.Forms.Button
 $button.Text = "Open File Dialog and Compare File Hash"
 $button.Location = New-Object System.Drawing.Point(180, 100)
-$button.Size = New-Object System.Drawing.Size(260, 30)
+$button.Size = New-Object System.Drawing.Size(260, 60)
 $form.Controls.Add($button)
 
 # Add a click event to the button
